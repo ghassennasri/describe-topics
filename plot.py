@@ -115,7 +115,7 @@ def plot_partition_distribution(topic):
     
     # Create inner ring
     sizes=np.array([[partitions[broker]['count']-partitions[broker]['count_leader'],partitions[broker]['count_leader']] for broker in labels]).flatten()
-    inner_colors=["green" if i % 2 == 0 else "gray" for i in range(len(sizes))]
+    inner_colors=["gray" if i % 2 == 0 else "green" for i in range(len(sizes))]
     inner_wedges, inner_texts = ax.pie(sizes, radius=size, colors=inner_colors,
            wedgeprops=dict(width=size, edgecolor='w'))
 
